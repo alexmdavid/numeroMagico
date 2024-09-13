@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Adivina el Número</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+    <!-- Vista de registro -->
+    <div id="registro">
+        <h2>Registro</h2>
+        <label for="nombre">Ingrese su nombre:</label>
+        <input id="nombre" type="text" placeholder="Tu nombre">
+        <button onclick="registrarUsuario()">Registrarse</button>
+    </div>
+
+    <!-- Vista del juego (oculta inicialmente) -->
+    <div id="juego" style="display: none;">
+        <h2>Bienvenido, <span id="nombreJugador"></span>! Vamos a jugar.</h2>
+        <p id="record">No hay récord aún.</p>
+        <div>Ingrese un número del 1 al 100</div>
+        <input id="intento" type="text" placeholder="Tu número">
+        <button type="submit" onclick="pista()">Adivinar</button>
+        <p id="valor_intento"></p>
+        <button id="botonReiniciar" style="display: none;" onclick="reiniciarJuego()">Reiniciar Juego</button>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
