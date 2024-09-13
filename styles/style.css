@@ -2,7 +2,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #95d2ef;
     display: flex;
-    flex-direction: column;
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -10,12 +9,52 @@ body {
     margin: 0;
 }
 
+/* estilos para el botón de registro */
+#registro button {
+    background-color: #28a745; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+ 
+#registro button:hover {
+    background-color: #218838;
+}
+
+button[type = "submit"]:hover {
+    background-color: #218838; 
+}
+
+
+/* estilos para la caja de texto */
+#registro input {
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+#intento {
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
 
 
 
 
 button[type="submit"] {
-    background-color: #4CAF50; /* Verde */
+    background-color: #4CAF50; 
     color: white;
     border: none;
     padding: 10px 20px;
