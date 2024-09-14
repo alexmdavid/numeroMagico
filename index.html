@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,15 @@
         <h2>Registro</h2>
         <label for="nombre">Ingrese su nombre:</label>
         <input id="nombre" type="text" placeholder="Tu nombre">
+        
+        <!-- Selector de dificultad -->
+        <label for="dificultad">Seleccione la dificultad:</label>
+        <select id="dificultad">
+            <option value="facil">Fácil (10 intentos, 60 segundos)</option>
+            <option value="medio">Medio (7 intentos, 45 segundos)</option>
+            <option value="dificil">Difícil (5 intentos, 30 segundos)</option>
+        </select>
+
         <button onclick="registrarUsuario()">Registrarse</button>
     </div>
 
@@ -20,9 +29,11 @@
     <div id="juego" style="display: none;">
         <h2>Bienvenido, <span id="nombreJugador"></span>! Vamos a jugar.</h2>
         <p id="record">No hay récord aún.</p>
+        <p id="tiempoRestante">Tiempo restante: <span id="contadorTiempo">0</span> segundos.</p>
         <div>Ingrese un número del 1 al 100</div>
-        <input id="intento" type="text" placeholder="Tu número">
-        <button type="submit" onclick="pista()">Adivinar</button>
+        <input id="intento" type="number" min="1" max="100" placeholder="Tu número">
+        <!-- Agregar el ID 'botonPista' al botón "Adivinar" -->
+        <button id="botonPista" type="button" onclick="pista()">Adivinar</button>
         <p id="valor_intento"></p>
         <button id="botonReiniciar" style="display: none;" onclick="reiniciarJuego()">Reiniciar Juego</button>
     </div>

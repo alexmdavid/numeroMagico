@@ -6,7 +6,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #95d2ef;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -14,7 +14,22 @@ body {
     color: aliceblue;
 }
 
-/* estilos para el botón de registro */
+h2 {
+    text-align: center;
+}
+
+/* Contenedor principal */
+#registro, #juego {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilos para el botón de registro */
 #registro button {
     background-color: #28a745; /* Verde */
     color: white;
@@ -24,18 +39,28 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 38%;
+    display: block; /* Centra el botón */
+    margin: 0 auto; /* Centra el botón */
 }
  
 #registro button:hover {
     background-color: #218838;
 }
 
-button[type = "submit"]:hover {
-    background-color: #218838; 
+/* Estilos para el combo de dificultad */
+#registro select {
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    color: #000;
 }
 
-
-/* estilos para la caja de texto */
+/* Estilos para la caja de texto */
 #registro input {
     padding: 8px;
     margin: 10px 0;
@@ -45,7 +70,7 @@ button[type = "submit"]:hover {
     box-sizing: border-box;
 }
 
-
+/* Estilo para el intento */
 #intento {
     padding: 8px;
     margin: 10px 0;
@@ -53,27 +78,63 @@ button[type = "submit"]:hover {
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
+    background-color: white;
+    color: #000;
 }
 
-
-
-
-button[type="submit"] {
+/* Botón de adivinar */
+#botonPista {
     background-color: #4CAF50; 
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    width: 38%;
+    display: block; /* Centra el botón */
+    margin: 10px auto; /* Centra el botón */
+    border-radius: 5px;
 }
 
+#botonPista:hover {
+    background-color: #218838; 
+}
+
+/* Botón de reiniciar */
 #botonReiniciar {
-    background-color: #4CAF50; 
+    background-color: #ff6347; /* Rojo */
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    margin-top: 15px;
+    border-radius: 5px;
+    display: none;
+    width: 38%;
+    display: block; /* Centra el botón */
+    margin: 10px auto; /* Centra el botón */
 }
 
-#botonReiniciar button:hover {
-    background-color: #218838;
+#botonReiniciar:hover {
+    background-color: #e55342;
+}
+
+/* Texto de tiempo restante */
+#tiempoRestante {
+    margin-top: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Texto de intento */
+#valor_intento {
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Estilo para el récord */
+#record {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
 }
